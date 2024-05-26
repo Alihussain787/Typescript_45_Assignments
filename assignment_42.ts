@@ -6,14 +6,15 @@
 let magician_names : string[] = ["Ali Baba","Zohaib","Jawad"];
 
 function show_magicians(magicians:string[]):string[]{
-    make_great(magicians);// this function modify magician_names with Great
-    return magicians;
+    let modified_megicians = make_great(magicians);// this function modify magician_names with Great
+    return modified_megicians;
 }
 function make_great(magicians:string[]):string[]{
+    let modified_megicians:string[] = [];
     for(let i = 0; i < magicians.length; i++){
-        magicians.splice(i,1,`Great ${magicians[i]}`);
+        modified_megicians.push(`Great ${magicians[i]}`);
     }
-    return magicians;
+    return modified_megicians;
 }
 let result = show_magicians(magician_names);
 console.log(result);
