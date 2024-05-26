@@ -4,14 +4,15 @@
 //Call show_magicians() to see that the list has actually been modified.
 var magician_names = ["Ali Baba", "Zohaib", "Jawad"];
 function show_magicians(magicians) {
-    make_great(magicians); // this function modify magician_names with Great
-    return magicians;
+    var modified_megicians = make_great(magicians); // this function modify magician_names with Great
+    return modified_megicians;
 }
 function make_great(magicians) {
+    var modified_megicians = [];
     for (var i = 0; i < magicians.length; i++) {
-        magicians.splice(i, 1, "Great ".concat(magicians[i]));
+        modified_megicians.push("Great ".concat(magicians[i]));
     }
-    return magicians;
+    return modified_megicians;
 }
 var result = show_magicians(magician_names);
 console.log(result);
